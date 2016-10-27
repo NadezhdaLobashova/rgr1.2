@@ -1,4 +1,4 @@
-<html>
+п»ї<html>
 <head>
 <meta charset="UTF-8"> 
 </head>
@@ -25,10 +25,10 @@
 	color: blue;
 }
 .form h2 {
-color: #4B0082;
-text-align: center;
-margin:50px;
-display: inline;
+	color: #4B0082;
+	text-align: center;
+	margin:50px;
+	display: inline;
 }
 .pyth{
 	text-align: center;
@@ -43,38 +43,37 @@ display: inline;
 
 <div class='all'>
 	<div class='photo'>
-	 <img class="jpg" src="http://mtplaymus.ru/uploads/images/treugolnik_teorema_pifagora.jpg">
-	 </div>
-	 <form method="GET" class="form">
-		<div class='pyth' ><h2> Теорема Пифагора </h2></div>
-		 
-		 Катет a: <input class='cat' type='text' name='cat1'  value =' <? if (isset($_GET['cat1'])) {
+		<img class="jpg" src="http://mtplaymus.ru/uploads/images/treugolnik_teorema_pifagora.jpg">
+	</div>
+	<form method="GET" class="form">
+		<div class='pyth' ><h2> РўРµРѕСЂРµРјР° РџРёС„Р°РіРѕСЂР° </h2></div>
+		РљР°С‚РµС‚ Рђ: <input class='cat' type='text' name='cat1'  value =' <? 
+		if (isset($_GET['cat1'])) {
 			echo  htmlspecialchars($_GET['cat1']) ;
-		 } ?>' placeholder= "Длина катета a" > <br>
-		 Катет b: <input class='cat' type='text' name='cat2' value=' <? if (isset($_GET['cat2'])) {
+		} ?>' placeholder= "Р”Р»РёРЅР° РєР°С‚РµС‚Р° a" > <br>
+		РљР°С‚РµС‚ Р’: <input class='cat' type='text' name='cat2' value=' <? 
+		if (isset($_GET['cat2'])) {
 			echo  htmlspecialchars($_GET['cat2']) ;
-		 } ?>' placeholder="Длина катета b"> <br>
-		 <input class="sub" type ="submit" value="Рассчитать" name="add"> 
-	 
-	 <?php
-	 $cat1=null;
-	 $cat2=null;
-	 if (isset ($_GET['cat1']) && isset ($_GET['cat2'])) { 
-		$cat1 = htmlspecialchars($_GET['cat1']); 
-		$cat2 = htmlspecialchars($_GET['cat2']); 
-		if (!is_numeric($cat1) || !is_numeric($cat2)){
-				echo "Введите числовое значение!";
-			} elseif ($cat1 < 0 || $cat2 < 0) {
-				echo "Катет не может быть отрицательным!";
-		} else {
-			Function Pythagoras ($cat1, $cat2) {
-						$result = sqrt(($cat1*$cat1)+($cat2*$cat2));
-						return $result;
-			} ;
-			echo "Гипотенуза равна " . number_format(Pythagoras ($cat1, $cat2), 2, ',', ' ');
+		} ?>' placeholder="Р”Р»РёРЅР° РєР°С‚РµС‚Р° b"> <br>
+		<input class="sub" type ="submit" value="Р Р°СЃСЃС‡РёС‚Р°С‚СЊ" name="add"> <?php
+		$cat1=null;
+		$cat2=null;
+		if (isset ($_GET['cat1']) && isset ($_GET['cat2'])) { 
+			$cat1 = htmlspecialchars($_GET['cat1']); 
+			$cat2 = htmlspecialchars($_GET['cat2']); 
+			if (!is_numeric($cat1) || !is_numeric($cat2)){
+					echo "Р’РІРµРґРёС‚Рµ С‡РёСЃР»РѕРІРѕРµ Р·РЅР°С‡РµРЅРёРµ!";
+				} elseif ($cat1 < 0 || $cat2 < 0) {
+					echo "РљР°С‚РµС‚ РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ РѕС‚СЂРёС†Р°С‚РµР»СЊРЅС‹Рј!";
+			} else {
+				Function Pythagoras ($cat1, $cat2) {
+							$result = sqrt(($cat1*$cat1)+($cat2*$cat2));
+							return $result;
+				} ;
+				echo "Р“РёРїРѕС‚РµРЅСѓР·Р° СЂР°РІРЅР° " . number_format(Pythagoras ($cat1, $cat2), 2, ',', ' ');
+			}
 		}
-	}
-	 ?>
+		 ?>
 	 </form>
 </div>
 </body>

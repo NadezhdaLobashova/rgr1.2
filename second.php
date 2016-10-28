@@ -47,14 +47,14 @@
 	</div>
 	<form method="GET" class="form">
 		<div class='pyth' ><h2> Теорема Пифагора </h2></div>
-		Катет А: <input class='cat' type='text' name='cat1'  value =' <? 
-		if (isset($_GET['cat1'])) {
-			echo  htmlspecialchars($_GET['cat1']) ;
-		} ?>' placeholder= "Длина катета a" > <br>
-		Катет В: <input class='cat' type='text' name='cat2' value=' <? 
-		if (isset($_GET['cat2'])) {
-			echo  htmlspecialchars($_GET['cat2']) ;
-		} ?>' placeholder="Длина катета b"> <br>
+		Катет А: <input class='cat' type='text' name='cat1'  value='<?php 
+		if(isset($_GET['cat1'])){
+			echo  htmlspecialchars($_GET['cat1']);
+		}?>'> <br>
+		Катет В: <input class='cat' type='text' name='cat2' value='<?php 
+		if(isset($_GET['cat2'])){
+			echo  htmlspecialchars($_GET['cat2']);
+		}?>'> <br>
 		<input class="sub" type ="submit" value="Рассчитать" name="add"> <?php
 		$cat1=null;
 		$cat2=null;
@@ -70,7 +70,7 @@
 							$result = sqrt(($cat1*$cat1)+($cat2*$cat2));
 							return $result;
 				} ;
-				echo "Гипотенуза равна " . number_format(Pythagoras ($cat1, $cat2), 2, ',', ' ');
+				echo "Гипотенуза равна " . number_format(Pythagoras ($_GET['cat1'], $_GET['cat2']), 2, ',', ' ');
 			}
 		}
 		 ?>

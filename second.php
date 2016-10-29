@@ -67,7 +67,7 @@
 					echo "Катет не может быть отрицательным!";
 			} else {
 				Function Pythagoras ($cat1, $cat2) {
-							$result = sqrt(($cat1*$cat1)+($cat2*$cat2));
+							$result =sqrt(($cat1*$cat1)+($cat2*$cat2));
 							return $result;
 				} ;
 				echo "Гипотенуза равна " . number_format(Pythagoras ($_GET['cat1'], $_GET['cat2']), 2, ',', ' ');
